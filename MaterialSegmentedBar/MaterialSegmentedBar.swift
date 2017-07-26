@@ -72,9 +72,9 @@ class MaterialSegmentedBar: UIControl {
             buttons.append(button)
         }
         buttons[0].setTitleColor(selectedTextColor, for: .normal)
+    
         
-        let selectorWidth = frame.width / CGFloat(buttons.count)
-        selector = UIView(frame: CGRect(x: 0, y: 45, width: selectorWidth, height: 3))
+        selector = UIView(frame: CGRect(x: 0, y: 45, width: buttons[0].frame.width, height: 3))
         selector.backgroundColor = selectorColor
         addSubview(selector)
         
@@ -82,7 +82,6 @@ class MaterialSegmentedBar: UIControl {
         stackHolder.axis = .horizontal
         stackHolder.alignment = .fill
         stackHolder.distribution = .fillProportionally
-        
         addSubview(stackHolder)
         
         stackHolder.translatesAutoresizingMaskIntoConstraints = false
@@ -107,6 +106,14 @@ class MaterialSegmentedBar: UIControl {
             }
         }
         sendActions(for: .valueChanged)
+    }
+    
+    override func draw(_ rect: CGRect) {
+        self.selector.frame.origin.x = buttons[0].frame.origin.x
+        var selectorFrame = self.selector.frame
+        selectorFrame.size.width = buttons[0].frame.width
+        self.selector.frame = selectorFrame
+
     }
 
 }

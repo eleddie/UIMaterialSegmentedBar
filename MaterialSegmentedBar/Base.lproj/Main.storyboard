@@ -26,10 +26,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0187217119" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="barBackgroundColor">
-                                        <color key="value" red="1" green="0.018721711901257154" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedValues" value="Top Rated|Popular|Upcoming"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="valuesSeparator" value=","/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="separatedValues" value="Categories,Popular,Top Rated,Upcoming"/>
                                 </userDefinedRuntimeAttributes>
